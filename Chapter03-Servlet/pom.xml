@@ -20,6 +20,10 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
+            <!--
+                provided 指的是在"编译"和"测试"过程中有效, 最后生成的 war 包时不会加入。
+                因为Tomcat的lib目录中已经有servlet-api这个jar包，如果在生成war包的时候生效就会和Tomcat中的jar包冲突, 导致报错。
+             -->
             <scope>provided</scope>
         </dependency>
     </dependencies>

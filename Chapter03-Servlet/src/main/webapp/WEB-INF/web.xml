@@ -3,4 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!-- 1.Servlet的全类名 -->
+    <servlet>
+        <!-- servlet的名称, 名字任意-->
+        <servlet-name>CustomServlet</servlet-name>
+        <!-- servlet的类全名 -->
+        <servlet-class>com.omega.demo01.CustomServlet</servlet-class>
+    </servlet>
+
+    <!-- 2.Servlet的访问路径 -->
+    <servlet-mapping>
+        <!-- servlet的名称, 要和上面的名称一致-->
+        <servlet-name>CustomServlet</servlet-name>
+        <!-- 访问路径, 可以多个-->
+        <url-pattern>/demo1</url-pattern>
+        <url-pattern>/demo01</url-pattern>
+        <url-pattern>/demo001</url-pattern>
+    </servlet-mapping>
 </web-app>
