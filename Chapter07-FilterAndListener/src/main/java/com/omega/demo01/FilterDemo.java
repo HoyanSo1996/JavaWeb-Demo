@@ -2,7 +2,6 @@ package com.omega.demo01;
 
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 /**
@@ -11,11 +10,12 @@ import java.io.IOException;
  * @author KennySo
  * @date 2023/11/15
  */
-@WebFilter("/*")
+//@WebFilter("/*")
 public class FilterDemo implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
+        System.out.println("init...");
     }
 
     @Override
@@ -30,5 +30,6 @@ public class FilterDemo implements Filter {
 
     @Override
     public void destroy() {
+        System.out.println("destroy...");
     }
 }
