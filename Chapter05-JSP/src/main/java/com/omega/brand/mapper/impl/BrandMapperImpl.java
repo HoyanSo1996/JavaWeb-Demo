@@ -1,8 +1,8 @@
-package com.omega.demo04.mapper.impl;
+package com.omega.brand.mapper.impl;
 
-import com.omega.demo04.mapper.BrandMapper;
-import com.omega.demo04.pojo.Brand;
-import com.omega.demo04.utils.MyBatisUtils;
+import com.omega.brand.mapper.BrandMapper;
+import com.omega.brand.pojo.Brand;
+import com.omega.brand.utils.MyBatisUtils;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;

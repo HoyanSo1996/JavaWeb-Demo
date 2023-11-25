@@ -1,9 +1,9 @@
-package com.omega.demo04.service.impl;
+package com.omega.brand.service.impl;
 
-import com.omega.demo04.mapper.BrandMapper;
-import com.omega.demo04.mapper.impl.BrandMapperImpl;
-import com.omega.demo04.pojo.Brand;
-import com.omega.demo04.service.BrandService;
+import com.omega.brand.mapper.BrandMapper;
+import com.omega.brand.mapper.impl.BrandMapperImpl;
+import com.omega.brand.pojo.Brand;
+import com.omega.brand.service.BrandService;
 
 import java.util.List;
 

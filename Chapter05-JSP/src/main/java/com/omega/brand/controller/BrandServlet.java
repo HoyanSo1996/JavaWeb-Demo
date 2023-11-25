@@ -1,8 +1,8 @@
-package com.omega.demo04.controller;
+package com.omega.brand.controller;
 
-import com.omega.demo04.pojo.Brand;
-import com.omega.demo04.service.BrandService;
-import com.omega.demo04.service.impl.BrandServiceImpl;
+import com.omega.brand.service.impl.BrandServiceImpl;
+import com.omega.brand.pojo.Brand;
+import com.omega.brand.service.BrandService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,7 +31,7 @@ public class BrandServlet extends HttpServlet {
         if ("selectAll".equals(path)) {
             List<Brand> brands = brandService.selectAll();
             request.setAttribute("brands", brands);
-            request.getRequestDispatcher("/demo04/brandList.jsp").forward(request, response);
+            request.getRequestDispatcher("/brandUi/brandList.jsp").forward(request, response);
 
         } else if ("add".equals(path)) {
             // 处理POST请求的乱码问题
@@ -47,14 +47,14 @@ public class BrandServlet extends HttpServlet {
 
             // 添加brand
             brandService.addBrand(brand);
-            // 回到查询页面
+            // 回到查询页面(更新attribute域中brands的值)
             request.getRequestDispatcher("/brand/selectAll").forward(request, response);
 
         } else if ("selectById".equals(path)) {
             Integer id = Integer.parseInt(request.getParameter("id"));
             Brand brand = brandService.selectOneById(id);
             request.setAttribute("brand", brand);
-            request.getRequestDispatcher("/demo04/updateBrand.jsp").forward(request, response);
+            request.getRequestDispatcher("/brandUi/updateBrand.jsp").forward(request, response);
 
         } else if ("update".equals(path)) {
             // 处理POST请求的乱码问题
@@ -71,14 +71,14 @@ public class BrandServlet extends HttpServlet {
 
             // 修改brand
             brandService.updateBrandById(brand);
-            // 转发到查询所有Servlet
+            // 转发到查询所有Servlet(更新attribute域中brands的值)
             request.getRequestDispatcher("/brand/selectAll").forward(request,response);
 
         } else if ("deleteById".equals(path)) {
             Integer id = Integer.parseInt(request.getParameter("id"));
             // 删除brand
             brandService.deleteBrandById(id);
-            // 转发到查询所有Servlet
+            // 转发到查询所有Servlet(更新attribute域中brands的值)
             request.getRequestDispatcher("/brand/selectAll").forward(request,response);
         }
     }

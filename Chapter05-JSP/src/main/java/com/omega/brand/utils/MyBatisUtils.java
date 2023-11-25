@@ -1,4 +1,4 @@
-package com.omega.demo04.utils;
+package com.omega.brand.utils;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

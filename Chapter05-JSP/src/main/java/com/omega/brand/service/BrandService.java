@@ -1,6 +1,6 @@
-package com.omega.demo04.service;
+package com.omega.brand.service;
 
-import com.omega.demo04.pojo.Brand;
+import com.omega.brand.pojo.Brand;
 
 import java.util.List;
 

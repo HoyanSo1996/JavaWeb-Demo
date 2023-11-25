@@ -1,4 +1,4 @@
-package com.omega.demo04.pojo;
+package com.omega.brand.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

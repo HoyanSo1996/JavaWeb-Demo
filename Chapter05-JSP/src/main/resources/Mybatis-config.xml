@@ -14,7 +14,7 @@
 
     <!--起别名-->
     <typeAliases>
-        <package name="com.omega.demo04.pojo"/>
+        <package name="com.omega.brand.pojo"/>
     </typeAliases>
 
     <environments default="development">
@@ -31,7 +31,7 @@
 
     <!--扫描mapper-->
     <mappers>
-        <package name="com.omega.demo04.mapper"/>
+        <package name="com.omega.brand.mapper"/>
     </mappers>
 
 
