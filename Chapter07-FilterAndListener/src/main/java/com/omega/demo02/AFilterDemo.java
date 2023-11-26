@@ -1,7 +1,6 @@
 package com.omega.demo02;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 /**
@@ -10,7 +9,7 @@ import java.io.IOException;
  * @author KennySo
  * @date 2023/11/16
  */
-@WebFilter("/*")
+//@WebFilter("/*")
 public class AFilterDemo implements Filter {
 
     @Override
