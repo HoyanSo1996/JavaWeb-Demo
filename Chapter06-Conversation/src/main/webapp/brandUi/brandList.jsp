@@ -11,8 +11,10 @@
 <body>
 <h1>${user.username}, 欢迎您</h1>
 
-<input type="button" value="新增" id="add"><br>
+<input type="button" value="新增" onclick="location.href='/conversation-demo/brandUi/addBrand.jsp';"> <%--使用绝对路径--%>
+<input type="button" value="退出" onclick="location.href='/conversation-demo/logout';">  <%--使用绝对路径--%>
 <hr>
+
 <table border="1" cellspacing="0" width="80%">
     <tr>
         <th>序号</th>
@@ -46,11 +48,5 @@
     </c:forEach>
 </table>
 </body>
-
-<script>
-    document.getElementById("add").onclick = function() {
-        location.href = "/conversation-demo/brandUi/addBrand.jsp";  /*使用绝对路径*/
-    }
-</script>
 
 </html>
