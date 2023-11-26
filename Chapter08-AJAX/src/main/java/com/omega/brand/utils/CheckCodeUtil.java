@@ -1,4 +1,4 @@
-package com.omega.demo02.utils;
+package com.omega.brand.utils;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package com.omega.demo02.pojo;
+package com.omega.brand.pojo;
 
 import lombok.Data;
 

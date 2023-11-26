@@ -1,6 +1,6 @@
-package com.omega.demo02.controller;
+package com.omega.brand.controller;
 
-import com.omega.demo02.utils.CheckCodeUtil;
+import com.omega.brand.utils.CheckCodeUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
