@@ -17,7 +17,7 @@ public class LogoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 让会话马上失效
         request.getSession().invalidate();
-        response.sendRedirect("/conversation-demo/brandUi/login.jsp");
+        response.sendRedirect("/ajax-demo/brandUi/login.jsp");
     }
 
     @Override

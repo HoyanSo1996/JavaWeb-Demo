@@ -19,4 +19,9 @@ public interface UserService {
      * 注册功能
      */
     Boolean register(User user);
+
+    /**
+     * 查询用户名是否被占用
+     */
+    User selectUserByUsername(String username);
 }

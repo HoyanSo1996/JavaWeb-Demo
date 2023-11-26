@@ -23,12 +23,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean register(User user) {
-        User realUser = userMapper.selectByUsername(user.getUsername());
-        if (realUser == null) {
-            // 用户名不存在, 添加新用户
-            userMapper.insertOne(user);
-            return true;
-        }
-        return false;
+        // 插入新用户
+        return userMapper.insertOne(user) > 0;
+
+    }
+
+    @Override
+    public User selectUserByUsername(String username) {
+        return userMapper.selectByUsername(username);
     }
 }

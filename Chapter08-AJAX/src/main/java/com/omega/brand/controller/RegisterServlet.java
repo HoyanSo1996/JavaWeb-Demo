@@ -48,7 +48,7 @@ public class RegisterServlet extends HttpServlet {
             request.getRequestDispatcher("/brandUi/login.jsp").forward(request, response);
         } else {
             // 注册失败，跳转到注册页面
-            request.setAttribute("register_msg", "用户名已存在");
+            request.setAttribute("register_msg", "注册失败，请重新注册");
             request.getRequestDispatcher("/brandUi/register.jsp").forward(request, response);
         }
     }

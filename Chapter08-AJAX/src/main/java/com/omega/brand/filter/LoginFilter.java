@@ -18,7 +18,11 @@ public class LoginFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         // 1.在数组中存储登陆和注册相关的资源路径
-        String[] urls = {"/imgs/", "/css/", "/login.jsp", "/login", "/logout", "/register.jsp", "/register", "/verificationCode"};
+        String[] urls = {"/imgs/", "/css/",
+                         "/login.jsp", "/login", "/logout",
+                         "/register.jsp", "/register",
+                         "/verificationCode",
+                         "/selectUsername"};
         // 2.获取当前访问的资源路径
         HttpServletRequest req = (HttpServletRequest) request;
         String url = req.getRequestURL().toString();
