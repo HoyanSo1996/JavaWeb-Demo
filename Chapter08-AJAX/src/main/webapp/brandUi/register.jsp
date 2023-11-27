@@ -6,6 +6,7 @@
     <title>欢迎注册</title>
     <%--如果css文件放在webapp的子文件夹下,那么引入css文件时就不能使用相对路径,而是使用绝对路径,否则serlvet在请求转发时会找不到css文件--%>
     <link href="/ajax-demo/brandUi/css/register.css" rel="stylesheet">
+    <script src="/ajax-demo/brandUi/js/axios-0.18.0.js"></script>
 </head>
 <body>
 
@@ -54,25 +55,35 @@
 
 </body>
 <script>
+    // // 用户名验证
+    // document.getElementById("username").onblur = function () {
+    //     // 2.发送ajax请求
+    //     let xhttp;
+    //     if (window.XMLHttpRequest) {
+    //         xhttp = new XMLHttpRequest();
+    //     } else {
+    //         // code for IE6, IE5
+    //         xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    //     }
+    //
+    //     xhttp.open("GET", "http://localhost:8080/ajax-demo/selectUsername?username=" + this.value);
+    //     xhttp.send();
+    //
+    //     xhttp.onreadystatechange = function () {
+    //         if (this.readyState == 4 && this.status == 200) {
+    //             document.getElementById("username_err").innerText = this.responseText;
+    //         }
+    //     }
+    // }
+
     // 用户名验证
     document.getElementById("username").onblur = function () {
-        // 2.发送ajax请求
-        let xhttp;
-        if (window.XMLHttpRequest) {
-            xhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-
-        xhttp.open("GET", "http://localhost:8080/ajax-demo/selectUsername?username=" + this.value);
-        xhttp.send();
-
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("username_err").innerText = this.responseText;
-            }
-        }
+        // 使用axios发送请求
+        axios
+            .get("http://localhost:8080/ajax-demo/selectUsername?username=" + this.value)
+            .then(function (resp) {
+                document.getElementById("username_err").innerText = resp.data;
+            });
     }
 
     // 验证码刷新
