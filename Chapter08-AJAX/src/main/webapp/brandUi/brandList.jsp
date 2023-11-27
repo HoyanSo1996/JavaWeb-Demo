@@ -41,8 +41,8 @@
                 <td>禁用</td>
             </c:if>
             <td>
-                <a href="/ajax/brand/selectById?id=${brand.id}">修改</a>
-                <a href="/ajax/brand/deleteById?id=${brand.id}">删除</a>
+                <a href="/ajax-demo/brand/selectById?id=${brand.id}">修改</a>
+                <a href="/ajax-demo/brand/deleteById?id=${brand.id}">删除</a>
             </td>
         </tr>
     </c:forEach>
