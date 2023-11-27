@@ -1,4 +1,4 @@
-package com.omega.demo03;
+package com.omega.demo02;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
