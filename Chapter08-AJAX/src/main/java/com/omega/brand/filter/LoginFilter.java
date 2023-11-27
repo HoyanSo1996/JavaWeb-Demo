@@ -18,7 +18,7 @@ public class LoginFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         // 1.在数组中存储登陆和注册相关的资源路径
-        String[] urls = {"/imgs/", "/css/", "js",
+        String[] urls = {"/imgs/", "/css/", "/js/",
                          "/login.jsp", "/login", "/logout",
                          "/register.jsp", "/register",
                          "/verificationCode",
