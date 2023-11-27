@@ -21,7 +21,7 @@
         <div id="subDiv">
             <input type="submit" class="button" value="login up">
             <input type="reset" class="button" value="reset">&nbsp;&nbsp;&nbsp;
-            <a href="/ajax-demo/brandUi/register.jsp">没有账号？</a>  <%--因为位于webapp的子文件夹,所有要使用绝对路径--%>
+            <a href="/ajax-demo/brandUi/register.html">没有账号？</a>  <%--因为位于webapp的子文件夹,所有要使用绝对路径--%>
         </div>
     </form>
 </div>
