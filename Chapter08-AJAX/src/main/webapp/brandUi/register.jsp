@@ -21,8 +21,8 @@
                 <td class="inputs">
                     <input name="username" type="text" id="username">
                     <br>
-                    <span id="username_err" class="err_msg" style="display: none">用户名已被注册</span>
                     <%--<span id="username_err" class="err_msg">${register_msg}</span>--%>
+                    <span id="username_err" class="err_msg"></span>
                 </td>
             </tr>
 
@@ -70,14 +70,7 @@
 
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                // 处理响应的结果
-                if (this.responseText == "true") {
-                    // 用户名存在，显示提示信息
-                    document.getElementById("username_err").style.display = '';
-                } else {
-                    // 用户名不存在 ，清楚提示信息
-                    document.getElementById("username_err").style.display = 'none';
-                }
+                document.getElementById("username_err").innerText = this.responseText;
             }
         }
     }

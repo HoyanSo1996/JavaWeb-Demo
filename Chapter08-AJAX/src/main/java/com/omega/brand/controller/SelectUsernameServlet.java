@@ -30,9 +30,9 @@ public class SelectUsernameServlet extends HttpServlet {
 
         if (user != null) {
             // 发送响应信息
-            response.getWriter().write("" + true);
+            response.getWriter().write("用户名已被注册");
         } else {
-            response.getWriter().write("" + false);
+            response.getWriter().write("");
         }
     }
 
