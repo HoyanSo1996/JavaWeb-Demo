@@ -37,4 +37,34 @@
         <servlet-name>ServletLifeCycle</servlet-name>
         <url-pattern>/demo2</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDemo</servlet-name>
+        <servlet-class>com.omega.demo03.ServletDemo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletDemo</servlet-name>
+        <url-pattern>/demo3</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyHttpServlet</servlet-name>
+        <servlet-class>com.omega.demo03.MyHttpServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyHttpServlet</servlet-name>
+        <url-pattern>/demo03</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SimplifiedServlet</servlet-name>
+        <servlet-class>com.omega.demo03.SimplifiedServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SimplifiedServlet</servlet-name>
+        <url-pattern>/demo003</url-pattern>
+    </servlet-mapping>
 </web-app>
