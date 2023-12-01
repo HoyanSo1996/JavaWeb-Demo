@@ -1,9 +1,7 @@
 package com.omega.demo02;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
-import java.time.LocalDateTime;
 
 /**
  * Class ServletLifeCycle
@@ -11,10 +9,6 @@ import java.time.LocalDateTime;
  * @author KennySo
  * @date 2023/10/21
  */
-// loadOnStartup (默认为-1)的取值有两类情况:
-// (1) 0或正整数: 服务器启动时实例化Servlet对象, 数字越小优先级越高.
-// (2) 负整数: 第一次访问时实例化Servlet对象.
-@WebServlet(urlPatterns = "/demo2", loadOnStartup = 1)
 public class ServletLifeCycle implements Servlet {
 
     private ServletConfig servletConfig;
@@ -26,7 +20,7 @@ public class ServletLifeCycle implements Servlet {
      */
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-        System.out.println(LocalDateTime.now() + " init...");
+        System.out.println("init...");
     }
 
     /**
@@ -36,7 +30,9 @@ public class ServletLifeCycle implements Servlet {
      */
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println(LocalDateTime.now() + " servlet is invoked...");
+        System.out.println("servlet is invoked...");
+        System.out.println("Servlet实例: " + this);  // 同一个对象
+        System.out.println("线程: " + Thread.currentThread().getId());  // 不同线程
     }
 
     /**
@@ -46,7 +42,7 @@ public class ServletLifeCycle implements Servlet {
      */
     @Override
     public void destroy() {
-        System.out.println(LocalDateTime.now() + " destroy...");
+        System.out.println("destroy...");
     }
 
     /**

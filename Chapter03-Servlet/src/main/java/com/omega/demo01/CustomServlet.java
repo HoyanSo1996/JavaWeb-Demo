@@ -10,7 +10,6 @@ import java.io.IOException;
  * @author KennySo
  * @date 2023/10/15
  */
-// @WebServlet("/demo1")
 public class CustomServlet implements Servlet {
 
     @Override
