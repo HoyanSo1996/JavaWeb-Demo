@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author KennySo
  * @date 2023/12/1
  */
-@WebServlet(urlPatterns = {"/demo4", "/demo04"}, loadOnStartup = 2)
+@WebServlet(name = "annotationServlet", urlPatterns = {"/demo4", "/demo04"}, loadOnStartup = 2)
 public class AnnotationServlet extends HttpServlet {
 
     @Override
