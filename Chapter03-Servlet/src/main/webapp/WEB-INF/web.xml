@@ -67,4 +67,24 @@
         <servlet-name>SimplifiedServlet</servlet-name>
         <url-pattern>/demo003</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DBServlet</servlet-name>
+        <servlet-class>com.omega.demo06.DBServlet</servlet-class>
+        <!--为当前servlet配置初始化参数(自定义)-->
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123456</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>DBServlet</servlet-name>
+        <url-pattern>/db</url-pattern>
+    </servlet-mapping>
 </web-app>
