@@ -87,4 +87,15 @@
         <servlet-name>DBServlet</servlet-name>
         <url-pattern>/db</url-pattern>
     </servlet-mapping>
+
+    <!--配置给整个web应用使用的参数-->
+    <context-param>
+        <param-name>website</param-name>
+        <param-value>https://www.omega.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>author</param-name>
+        <param-value>KennySo</param-value>
+    </context-param>
+    
 </web-app>
