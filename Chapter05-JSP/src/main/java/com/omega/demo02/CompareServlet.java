@@ -1,4 +1,4 @@
-package com.omega.demo04;
+package com.omega.demo02;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
