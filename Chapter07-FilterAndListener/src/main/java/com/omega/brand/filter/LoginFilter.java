@@ -1,7 +1,6 @@
 package com.omega.brand.filter;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -12,7 +11,7 @@ import java.io.IOException;
  * @author KennySo
  * @date 2023/11/16
  */
-@WebFilter("/*")
+//@WebFilter("/*")
 public class LoginFilter implements Filter {
 
     @Override
