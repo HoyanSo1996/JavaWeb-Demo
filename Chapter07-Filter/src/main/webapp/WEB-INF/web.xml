@@ -3,4 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!-- 配置过滤器 -->
+    <filter>
+        <filter-name>CustomFilter</filter-name>
+        <filter-class>com.omega.demo01.CustomFilter</filter-class>
+    </filter>
+
+    <!-- 配置过滤器拦截路径 -->
+    <filter-mapping>
+        <filter-name>CustomFilter</filter-name>
+        <!--拦截全部请求-->
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
