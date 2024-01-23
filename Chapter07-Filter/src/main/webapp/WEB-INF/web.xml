@@ -17,6 +17,29 @@
 <!--        <url-pattern>/*</url-pattern>-->
 <!--    </filter-mapping>-->
 
+<!--    <filter>-->
+<!--        <filter-name>CustomFilterConfig</filter-name>-->
+<!--        <filter-class>com.omega.demo02.CustomFilterConfig</filter-class>-->
+<!--        <init-param>-->
+<!--            <param-name>ip</param-name>-->
+<!--            <param-value>192.128.66.66</param-value>-->
+<!--        </init-param>-->
+<!--        <init-param>-->
+<!--            <param-name>hobby1</param-name>-->
+<!--            <param-value>basketball</param-value>-->
+<!--        </init-param>-->
+<!--        <init-param>-->
+<!--            <param-name>hobby2</param-name>-->
+<!--            <param-value>football</param-value>-->
+<!--        </init-param>-->
+<!--    </filter>-->
+
+<!--    <filter-mapping>-->
+<!--        <filter-name>CustomFilterConfig</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+
+
     <filter>
         <filter-name>TopicFilter</filter-name>
         <filter-class>com.omega.scenario.TopicFilter</filter-class>
