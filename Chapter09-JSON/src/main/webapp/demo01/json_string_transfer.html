@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON 对象和字符串对象转换</title>
+    <script type="text/javascript">
+        let jsonObj = {"name": "Cody", age: 10};
+        // JSON 是一个内置对象(build-in), 提供了方法使用
+        console.log("JSON", JSON);
+
+        // jsonObj -> jsonStr
+        var jsonStr = JSON.stringify(jsonObj);
+        console.log("jsonStr", jsonStr);
+
+        // jsonStr -> jsonObj
+        var jsonObj2 = JSON.parse(jsonStr);
+        console.log("jsonObj2", jsonObj2)
+    </script>
+</head>
+<body>
+<h1>JSON 对象和字符串对象转换</h1>
+</body>
+</html>
