@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <script type="text/javascript">
+        function checkUser() {
+            // 1.创建XMLHttpRequest对象(不同的浏览器创建的对象是不同的)
+            var xhr;
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            // 2.发送请求
+            var uname = document.getElementById("uname").value;
+            xhr.open("GET", "/ajax-demo/register?username=" + uname, true);
+            xhr.send();
+
+            // 3.等待响应
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    if (xhr.responseText !== "") {
+                        document.getElementById("myres").value = "用户名已占用";
+                    } else {
+                        document.getElementById("myres").value = "用户名可用";
+                    }
+                    document.getElementById("div1").innerText = xhr.responseText
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>用户注册</h1>
+<form action="#" method="post">
+    用户名字:<input type="text" name="username" id="uname">
+    <input type="button" onclick="checkUser();" value="验证用户名">
+    <input style="border-width: 0;color: red" type="text" id="myres"><br/><br/>
+    用户密码:<input type="password" name="password"><br/><br/>
+    电子邮件:<input type="text" name="email"><br/><br/>
+    <input type="submit" value="用户注册">
+</form>
+<h1>返回的 json 数据</h1>
+<div id="div1"></div>
+</body>
+</html>
