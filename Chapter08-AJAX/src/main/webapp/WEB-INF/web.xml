@@ -13,4 +13,14 @@
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+
+<!--    <servlet>-->
+<!--        <servlet-name>registerServlet2</servlet-name>-->
+<!--        <servlet-class>com.omega.demo01.controller.RegisterServlet2</servlet-class>-->
+<!--    </servlet>-->
+
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>registerServlet2</servlet-name>-->
+<!--        <url-pattern>/register2</url-pattern>-->
+<!--    </servlet-mapping>-->
 </web-app>

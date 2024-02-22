@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册~JQuery+Ajax</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn1").click(function () {
+                // 使用 $.ajax 发送ajax
+                // $.ajax({
+                //     url: "/ajax-demo/register2",
+                //     type: "GET",
+                //     data: {  // 这里要写成json格式
+                //         username: $("#uname").val(),
+                //         date: new Date()  // 传日期的作用是防止浏览器产生缓存
+                //     },
+                //     success: function (data, status, xhr) {  // 也可以不接收参数
+                //         console.log("请求成功~");
+                //         console.log("data=", data);
+                //         console.log("status=", status);
+                //         console.log("xhr=", xhr);
+                //         if (data.username != "") {  // 这里的data是json对象
+                //             $("#myres").val("用户名已被占用");
+                //             $("#div1").html(JSON.stringify(data));
+                //         } else {
+                //             $("#myres").val("用户名可用");
+                //         }
+                //     },
+                //     error: function () {
+                //         console.log("请求失败~");
+                //     },
+                //     dataType: "json"
+                // });
+
+                // 使用 $.get().
+                // 1. 不需要设置属性名, 但要安排保证属性的顺序
+                // 2. $.post() 的使用方式类似
+                $.get(
+                    "/ajax-demo/register2",
+                    {
+                        username: $("#uname").val(),
+                        date: new Date()
+                    },
+                    function (data, status, xhr) {
+                        console.log("$.get() 请求成功~");
+                        console.log("data=", data);
+                        console.log("status=", status);
+                        console.log("xhr=", xhr);
+                        if (data.username != "") {
+                           $("#myres").val("用户名已被占用");
+                           $("#div1").html(JSON.stringify(data));
+                        } else {
+                            $("#myres").val("用户名可用");
+                        }
+                    },
+                    "json"
+                );
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>用户注册</h1>
+<form action="#" method="post">
+    用户名字:<input type="text" name="username" id="uname">
+    <input type="button" id="btn1" value="验证用户名">
+    <input style="border-width: 0;color: red" type="text" id="myres"><br/><br/>
+    用户密码:<input type="password" name="password"><br/><br/>
+    电子邮件:<input type="text" name="email"><br/><br/>
+    <input type="submit" value="用户注册">
+</form>
+<h1>返回的 json 数据</h1>
+<div id="div1"></div>
+</body>
+</html>
